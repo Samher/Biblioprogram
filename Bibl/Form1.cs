@@ -16,5 +16,18 @@ namespace Bibl
         {
             InitializeComponent();
         }
+
+        List<Verk> registry = new List<Verk>();
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insertBtn_Click(object sender, EventArgs e)
+        {
+            registerForm register = new registerForm(registry);
+            //öppna registerForm
+        }
     }
 }
