@@ -27,7 +27,7 @@ namespace Bibl
         private void insertBtn_Click(object sender, EventArgs e)
         {
             registerForm register = new registerForm(registry);
-            //öppna registerForm
+            register.Show();
         }
     }
 }

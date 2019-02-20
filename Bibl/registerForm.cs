@@ -22,6 +22,8 @@ namespace Bibl
         private void regInsertBtn_Click(object sender, EventArgs e)
         {
             registry.Add(new Verk(regTtlBox.Text, regAuthBox.Text, false));
+            regAuthBox.Clear();
+            regTtlBox.Clear();
         }
     }
 }
