@@ -12,18 +12,16 @@ namespace Bibl
 {
     public partial class lendForm : Form
     {
-        List<Verk> registry;
-        public lendForm(List<Verk> registryParam)
+        public lendForm()
         {
             InitializeComponent();
-            registry = registryParam;
         }
 
         private void lndCtnBtn_Click(object sender, EventArgs e)
         {
-            foreach (Verk element in registry)
+            foreach (Verk element in Form1.registry)
             {
-                if (element.Title.ToUpper() == lndCtnBtn.Text.ToUpper())
+                if (element.Title.ToUpper() == lndTtl1Box.Text.ToUpper())
                 {
                     lndTtlBoxG.Text = element.Title;
                     lndAuthBoxG.Text = element.Author;

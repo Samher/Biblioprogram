@@ -12,26 +12,24 @@ namespace Bibl
 {
     public partial class registerForm : Form
     {
-        List<Verk> registry;
-        public registerForm(List<Verk> registryParam)
+        public registerForm()
         {
-            registry = registryParam;
             InitializeComponent();
-            RegUpdate(registry);
+            RegUpdate(Form1.registry);
         }
 
         private void regInsertBtn_Click(object sender, EventArgs e)
         {
-            registry.Add(new Verk(regTtlBox.Text, regAuthBox.Text, 0));
+            Form1.registry.Add(new Verk(regTtlBox.Text, regAuthBox.Text, 0));
             regAuthBox.Clear();
             regTtlBox.Clear();
-            RegUpdate(registry);
+            RegUpdate(Form1.registry);
         }
 
         private void RegUpdate(List<Verk> reg)
         {
             regRegBox.Clear();
-            foreach (Verk work in registry)
+            foreach (Verk work in Form1.registry)
             {
                 regRegBox.Text += work.Title + " " + work.Author + " " + work.Lent.ToString() + "\r\n";
             }
