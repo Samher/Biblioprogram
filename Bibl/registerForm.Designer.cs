@@ -105,6 +105,7 @@
             this.regRegBox.Multiline = true;
             this.regRegBox.Name = "regRegBox";
             this.regRegBox.ReadOnly = true;
+            this.regRegBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.regRegBox.Size = new System.Drawing.Size(209, 235);
             this.regRegBox.TabIndex = 7;
             // 
