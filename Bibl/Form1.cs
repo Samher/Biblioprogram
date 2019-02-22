@@ -32,7 +32,7 @@ namespace Bibl
 
         private void lendBtn_Click(object sender, EventArgs e)
         {
-            lendForm lend = new lendForm();
+            lendForm lend = new lendForm(registry);
             lend.Show();
         }
     }

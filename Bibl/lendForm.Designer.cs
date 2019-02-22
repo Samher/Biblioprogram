@@ -74,6 +74,7 @@
             this.lndCtnBtn.TabIndex = 2;
             this.lndCtnBtn.Text = "Vidare";
             this.lndCtnBtn.UseVisualStyleBackColor = true;
+            this.lndCtnBtn.Click += new System.EventHandler(this.lndCtnBtn_Click);
             // 
             // lndLendBtn
             // 
@@ -84,6 +85,7 @@
             this.lndLendBtn.TabIndex = 3;
             this.lndLendBtn.Text = "Låna";
             this.lndLendBtn.UseVisualStyleBackColor = true;
+            this.lndLendBtn.Click += new System.EventHandler(this.lndLendBtn_Click);
             // 
             // lndCcl1Btn
             // 
@@ -94,6 +96,7 @@
             this.lndCcl1Btn.TabIndex = 4;
             this.lndCcl1Btn.Text = "Avbryt";
             this.lndCcl1Btn.UseVisualStyleBackColor = true;
+            this.lndCcl1Btn.Click += new System.EventHandler(this.lndCcl1Btn_Click);
             // 
             // lndTtl2Lbl
             // 
