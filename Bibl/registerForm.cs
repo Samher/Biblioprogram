@@ -33,8 +33,36 @@ namespace Bibl
             regRegBox.Clear();
             foreach (Verk work in registry)
             {
-                regRegBox.Text += work.Title + " " + work.Author + " " + work.Lent.ToString() + "\r\n";
+                if (work.Lent == 1)
+                    regRegBox.Text += work.Title + " | " + work.Author + " | Utlånad\r\n";
+                else
+                    regRegBox.Text += work.Title + " | " + work.Author + " | Ej utlånad\r\n";
             }
         }
+
+        private void regRemoveBBtn_Click(object sender, EventArgs e)
+        {
+            for (int i = registry.Count; i > 0; i--)
+            {
+                if (regTtlBox.Text.ToUpper() == registry[i - 1].Title.ToUpper())
+                {
+                    registry.RemoveAt(i - 1);
+                    RegUpdate(registry);
+                }
+            }
+        }
+
+        private void regRemoveABtn_Click(object sender, EventArgs e)
+        {
+            for (int i = registry.Count; i > 0; i--)
+            {
+                if (regAuthBox.Text.ToUpper() == registry[i - 1].Author.ToUpper())
+                {
+                    registry.RemoveAt(i - 1);
+                    RegUpdate(registry);
+                }
+            }
+        }
+
     }
 }

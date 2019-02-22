@@ -89,6 +89,7 @@
             this.regRemoveBBtn.TabIndex = 5;
             this.regRemoveBBtn.Text = "Ta bort verk";
             this.regRemoveBBtn.UseVisualStyleBackColor = true;
+            this.regRemoveBBtn.Click += new System.EventHandler(this.regRemoveBBtn_Click);
             // 
             // regRemoveABtn
             // 
@@ -98,6 +99,7 @@
             this.regRemoveABtn.TabIndex = 6;
             this.regRemoveABtn.Text = "Ta bort författare";
             this.regRemoveABtn.UseVisualStyleBackColor = true;
+            this.regRemoveABtn.Click += new System.EventHandler(this.regRemoveABtn_Click);
             // 
             // regRegBox
             // 
