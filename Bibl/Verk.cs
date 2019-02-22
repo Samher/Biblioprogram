@@ -9,7 +9,7 @@ namespace Bibl
     public class Verk
     {
         private string title, author;
-        private bool lent;
+        private int lent;
 
         public string Title
         {
@@ -23,13 +23,13 @@ namespace Bibl
             set { author = value; }
         }
 
-        public bool Lent
+        public int Lent
         {
             get { return lent; }
             set { lent = value; }
         }
 
-        public Verk(string t, string a, bool l)
+        public Verk(string t, string a, int l)
         {
             Title = t;
             Author = a;
