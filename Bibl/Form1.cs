@@ -29,5 +29,11 @@ namespace Bibl
             registerForm register = new registerForm(registry);
             register.Show();
         }
+
+        private void lendBtn_Click(object sender, EventArgs e)
+        {
+            lendForm lend = new lendForm();
+            lend.Show();
+        }
     }
 }

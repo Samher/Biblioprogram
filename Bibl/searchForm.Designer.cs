@@ -31,18 +31,20 @@
             this.srh = new System.Windows.Forms.TextBox();
             this.srhSearchBtn = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.srhResultLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // srh
             // 
-            this.srh.Location = new System.Drawing.Point(12, 30);
+            this.srh.Location = new System.Drawing.Point(12, 31);
             this.srh.Name = "srh";
             this.srh.Size = new System.Drawing.Size(145, 20);
             this.srh.TabIndex = 1;
             // 
             // srhSearchBtn
             // 
-            this.srhSearchBtn.Location = new System.Drawing.Point(163, 28);
+            this.srhSearchBtn.Location = new System.Drawing.Point(163, 30);
             this.srhSearchBtn.Name = "srhSearchBtn";
             this.srhSearchBtn.Size = new System.Drawing.Size(45, 23);
             this.srhSearchBtn.TabIndex = 2;
@@ -58,11 +60,31 @@
             this.textBox1.Size = new System.Drawing.Size(339, 263);
             this.textBox1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Sök efter verk / författare";
+            // 
+            // srhResultLbl
+            // 
+            this.srhResultLbl.AutoSize = true;
+            this.srhResultLbl.Location = new System.Drawing.Point(13, 82);
+            this.srhResultLbl.Name = "srhResultLbl";
+            this.srhResultLbl.Size = new System.Drawing.Size(60, 13);
+            this.srhResultLbl.TabIndex = 5;
+            this.srhResultLbl.Text = "Sökresultat";
+            // 
             // searchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 376);
+            this.Controls.Add(this.srhResultLbl);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.srhSearchBtn);
             this.Controls.Add(this.srh);
@@ -78,5 +100,7 @@
         private System.Windows.Forms.TextBox srh;
         private System.Windows.Forms.Button srhSearchBtn;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label srhResultLbl;
     }
 }
