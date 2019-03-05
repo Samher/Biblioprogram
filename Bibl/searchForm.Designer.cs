@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.srh = new System.Windows.Forms.TextBox();
+            this.srhBox = new System.Windows.Forms.TextBox();
             this.srhSearchBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.srhResBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.srhResultLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // srh
+            // srhBox
             // 
-            this.srh.Location = new System.Drawing.Point(12, 31);
-            this.srh.Name = "srh";
-            this.srh.Size = new System.Drawing.Size(145, 20);
-            this.srh.TabIndex = 1;
+            this.srhBox.Location = new System.Drawing.Point(12, 31);
+            this.srhBox.Name = "srhBox";
+            this.srhBox.Size = new System.Drawing.Size(145, 20);
+            this.srhBox.TabIndex = 1;
             // 
             // srhSearchBtn
             // 
@@ -50,15 +50,17 @@
             this.srhSearchBtn.TabIndex = 2;
             this.srhSearchBtn.Text = "Sök";
             this.srhSearchBtn.UseVisualStyleBackColor = true;
+            this.srhSearchBtn.Click += new System.EventHandler(this.srhSearchBtn_Click);
             // 
-            // textBox1
+            // srhResBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(339, 263);
-            this.textBox1.TabIndex = 3;
+            this.srhResBox.Location = new System.Drawing.Point(12, 101);
+            this.srhResBox.Multiline = true;
+            this.srhResBox.Name = "srhResBox";
+            this.srhResBox.ReadOnly = true;
+            this.srhResBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.srhResBox.Size = new System.Drawing.Size(339, 263);
+            this.srhResBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -85,9 +87,9 @@
             this.ClientSize = new System.Drawing.Size(363, 376);
             this.Controls.Add(this.srhResultLbl);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.srhResBox);
             this.Controls.Add(this.srhSearchBtn);
-            this.Controls.Add(this.srh);
+            this.Controls.Add(this.srhBox);
             this.Name = "searchForm";
             this.Text = "searchForm";
             this.ResumeLayout(false);
@@ -97,9 +99,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox srh;
+        private System.Windows.Forms.TextBox srhBox;
         private System.Windows.Forms.Button srhSearchBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox srhResBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label srhResultLbl;
     }

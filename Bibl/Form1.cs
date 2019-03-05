@@ -21,7 +21,8 @@ namespace Bibl
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-
+            searchForm search = new searchForm();
+            search.Show();
         }
 
         private void insertBtn_Click(object sender, EventArgs e)

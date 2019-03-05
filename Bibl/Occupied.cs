@@ -16,5 +16,10 @@ namespace Bibl
         {
             InitializeComponent();
         }
+
+        private void occClsBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,33 +29,34 @@
         private void InitializeComponent()
         {
             this.OccpdLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.occClsBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OccpdLbl
             // 
             this.OccpdLbl.AutoSize = true;
-            this.OccpdLbl.Location = new System.Drawing.Point(45, 36);
+            this.OccpdLbl.Location = new System.Drawing.Point(25, 22);
             this.OccpdLbl.Name = "OccpdLbl";
             this.OccpdLbl.Size = new System.Drawing.Size(177, 13);
             this.OccpdLbl.TabIndex = 0;
             this.OccpdLbl.Text = "Ett verk med denna titel finns redan.";
             // 
-            // button1
+            // occClsBtn
             // 
-            this.button1.Location = new System.Drawing.Point(94, 68);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ok";
-            this.button1.UseVisualStyleBackColor = true;
+            this.occClsBtn.Location = new System.Drawing.Point(76, 51);
+            this.occClsBtn.Name = "occClsBtn";
+            this.occClsBtn.Size = new System.Drawing.Size(75, 23);
+            this.occClsBtn.TabIndex = 1;
+            this.occClsBtn.Text = "Ok";
+            this.occClsBtn.UseVisualStyleBackColor = true;
+            this.occClsBtn.Click += new System.EventHandler(this.occClsBtn_Click);
             // 
             // Occupied
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 122);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(224, 96);
+            this.Controls.Add(this.occClsBtn);
             this.Controls.Add(this.OccpdLbl);
             this.Name = "Occupied";
             this.Text = "Occupied";
@@ -67,6 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Label OccpdLbl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button occClsBtn;
     }
 }
