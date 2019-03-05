@@ -31,6 +31,7 @@
             this.insertBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.lendBtn = new System.Windows.Forms.Button();
+            this.importBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // insertBtn
@@ -65,16 +66,28 @@
             this.lendBtn.UseVisualStyleBackColor = true;
             this.lendBtn.Click += new System.EventHandler(this.lendBtn_Click);
             // 
+            // importBtn
+            // 
+            this.importBtn.Location = new System.Drawing.Point(176, 12);
+            this.importBtn.Name = "importBtn";
+            this.importBtn.Size = new System.Drawing.Size(75, 23);
+            this.importBtn.TabIndex = 4;
+            this.importBtn.Text = "Importera";
+            this.importBtn.UseVisualStyleBackColor = true;
+            this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 306);
+            this.Controls.Add(this.importBtn);
             this.Controls.Add(this.lendBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.insertBtn);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exiting);
             this.ResumeLayout(false);
 
         }
@@ -84,6 +97,7 @@
         private System.Windows.Forms.Button insertBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button lendBtn;
+        private System.Windows.Forms.Button importBtn;
     }
 }
 

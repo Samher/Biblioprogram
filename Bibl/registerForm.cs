@@ -40,24 +40,24 @@ namespace Bibl
 
         private void regRemoveBBtn_Click(object sender, EventArgs e)
         {
-            for (int i = registry.Count; i > 0; i--)
+            for (int i = Form1.registry.Count; i > 0; i--)
             {
-                if (regTtlBox.Text.ToUpper() == registry[i - 1].Title.ToUpper())
+                if (regTtlBox.Text.ToUpper() == Form1.registry[i - 1].Title.ToUpper())
                 {
-                    registry.RemoveAt(i - 1);
-                    RegUpdate(registry);
+                    Form1.registry.RemoveAt(i - 1);
+                    RegUpdate(Form1.registry);
                 }
             }
         }
 
         private void regRemoveABtn_Click(object sender, EventArgs e)
         {
-            for (int i = registry.Count; i > 0; i--)
+            for (int i = Form1.registry.Count; i > 0; i--)
             {
-                if (regAuthBox.Text.ToUpper() == registry[i - 1].Author.ToUpper())
+                if (regAuthBox.Text.ToUpper() == Form1.registry[i - 1].Author.ToUpper())
                 {
-                    registry.RemoveAt(i - 1);
-                    RegUpdate(registry);
+                    Form1.registry.RemoveAt(i - 1);
+                    RegUpdate(Form1.registry);
                 }
             }
         }
