@@ -63,6 +63,7 @@
             this.lendBtn.TabIndex = 3;
             this.lendBtn.Text = "Låna / Lämna";
             this.lendBtn.UseVisualStyleBackColor = true;
+            this.lendBtn.Click += new System.EventHandler(this.lendBtn_Click);
             // 
             // Form1
             // 

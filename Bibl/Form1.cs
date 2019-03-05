@@ -17,7 +17,7 @@ namespace Bibl
             InitializeComponent();
         }
 
-        List<Verk> registry = new List<Verk>();
+        public static List<Verk> registry = new List<Verk>();
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -26,8 +26,14 @@ namespace Bibl
 
         private void insertBtn_Click(object sender, EventArgs e)
         {
-            registerForm register = new registerForm(registry);
+            registerForm register = new registerForm();
             register.Show();
+        }
+
+        private void lendBtn_Click(object sender, EventArgs e)
+        {
+            lendForm lend = new lendForm();
+            lend.Show();
         }
     }
 }
