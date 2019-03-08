@@ -36,13 +36,8 @@ namespace Bibl
                     occupied.Show();
                     return;
                 }
-                else
-                {
-                    AddWork();
-                }
             }
-            if (Form1.registry.Count < 1)
-                AddWork();
+            AddWork();
         }
 
         private void RegUpdate(List<Verk> reg)

@@ -40,6 +40,7 @@ namespace Bibl
 
         private void importBtn_Click(Object sender, EventArgs e)
         {
+            registry.Clear();
             StreamReader rfile = new StreamReader("registry.txt");
             string s, tempTtl, tempAuth;
             int tempLent;

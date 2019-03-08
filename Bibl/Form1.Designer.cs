@@ -40,7 +40,7 @@
             this.insertBtn.Location = new System.Drawing.Point(12, 193);
             this.insertBtn.Name = "insertBtn";
             this.insertBtn.Size = new System.Drawing.Size(239, 47);
-            this.insertBtn.TabIndex = 0;
+            this.insertBtn.TabIndex = 2;
             this.insertBtn.Text = "Mata in / Ta bort";
             this.insertBtn.UseVisualStyleBackColor = true;
             this.insertBtn.Click += new System.EventHandler(this.insertBtn_Click);
@@ -71,7 +71,7 @@
             this.importBtn.Location = new System.Drawing.Point(176, 12);
             this.importBtn.Name = "importBtn";
             this.importBtn.Size = new System.Drawing.Size(75, 23);
-            this.importBtn.TabIndex = 4;
+            this.importBtn.TabIndex = 0;
             this.importBtn.Text = "Importera";
             this.importBtn.UseVisualStyleBackColor = true;
             this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
