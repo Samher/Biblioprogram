@@ -103,6 +103,9 @@
             // 
             // regRegBox
             // 
+            this.regRegBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.regRegBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.regRegBox.Location = new System.Drawing.Point(213, 35);
             this.regRegBox.Multiline = true;
             this.regRegBox.Name = "regRegBox";

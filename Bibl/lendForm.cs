@@ -116,5 +116,19 @@ namespace Bibl
             lndRtnBtn.Enabled = false;
             lndCcl2Btn.Enabled = false;
         }
+
+        public void AutoFill(string title)
+        {
+            if (Search(title).Lent == 1)
+            {
+                lndTtl2Box.Text = title;
+                lndCtn2Btn.PerformClick();
+            }
+            else if (Search(title).Lent == 0)
+            {
+                lndTtl1Box.Text = title;
+                lndCtnBtn.PerformClick();
+            }
+        }
     }
 }

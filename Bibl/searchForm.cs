@@ -19,18 +19,28 @@ namespace Bibl
 
         private void srhSearchBtn_Click(object sender, EventArgs e)
         {
+            srhLstBox.Items.Clear();
             foreach (Verk work in Form1.registry)
             {
-                if ((work.Author.ToUpper().Contains(srhBox.Text.ToUpper()) || 
-                    work.Title.ToUpper().Contains(srhBox.Text.ToUpper())) && 
-                    !srhResBox.Text.Contains(work.Title))
+                if (work.Author.ToUpper().Contains(srhBox.Text.ToUpper()) || 
+                    work.Title.ToUpper().Contains(srhBox.Text.ToUpper()))
                 {
                     if (work.Lent == 1)
-                        srhResBox.Text += work.Title + " | " + work.Author + " | Utlånad\r\n";
+                        srhLstBox.Items.Add(work.Title + "|" + work.Author + "|Utlånad");
                     else
-                        srhResBox.Text += work.Title + " | " + work.Author + " | Ej utlånad\r\n";
+                        srhLstBox.Items.Add(work.Title + "|" + work.Author + "|Ej Utlånad");
                 }
             }
+        }
+
+        private void srhLstBox_DoubleClick(object sender, EventArgs e)
+        {
+            lendForm lndfrm = new lendForm();
+            lndfrm.Show();
+            string s = srhLstBox.SelectedItem.ToString();
+            string[] mrkdString = s.Split('|');
+            lndfrm.AutoFill(mrkdString[0]);
+            this.Close();
         }
     }
 }
