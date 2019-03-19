@@ -61,6 +61,7 @@
             // 
             // lndTtl1Box
             // 
+            this.lndTtl1Box.AccessibleName = "lndTtlBox";
             this.lndTtl1Box.Location = new System.Drawing.Point(12, 71);
             this.lndTtl1Box.Name = "lndTtl1Box";
             this.lndTtl1Box.Size = new System.Drawing.Size(142, 20);
