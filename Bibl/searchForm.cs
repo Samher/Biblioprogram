@@ -26,15 +26,21 @@ namespace Bibl
                     work.Title.ToUpper().Contains(srhBox.Text.ToUpper()))
                 {
                     if (work.Lent == 1)
-                        srhLstBox.Items.Add(work.Title + " | " + work.Author + " | Utlånad\r\n");
+                        srhLstBox.Items.Add(work.Title + "|" + work.Author + "|Utlånad");
                     else
-                        srhLstBox.Items.Add(work.Title + " | " + work.Author + " | Ej Utlånad\r\n");
+                        srhLstBox.Items.Add(work.Title + "|" + work.Author + "|Ej Utlånad");
                 }
             }
         }
-        private void srhBox_dblClick()
+
+        private void srhLstBox_DoubleClick(object sender, EventArgs e)
         {
-            
+            lendForm lndfrm = new lendForm();
+            lndfrm.Show();
+            string s = srhLstBox.SelectedItem.ToString();
+            string[] mrkdString = s.Split('|');
+            lndfrm.AutoFill(mrkdString[0]);
+            this.Close();
         }
     }
 }

@@ -17,11 +17,11 @@ namespace Bibl
             InitializeComponent();
         }
 
-        private Verk Search(string s, TextBox b)
+        private Verk Search(string s)
         {
             foreach (Verk element in Form1.registry)
             {
-                if (element.Title.ToUpper() == b.Text.ToUpper())
+                if (element.Title.ToUpper() == s.ToUpper())
                 {
                     return element;
                 }
@@ -31,10 +31,10 @@ namespace Bibl
 
         private void lndCtnBtn_Click(object sender, EventArgs e)
         {
-            if (Search(lndTtl1Box.Text, lndTtl1Box) != null)
+            if (Search(lndTtl1Box.Text) != null)
             {
-                lndTtlBoxG.Text = Search(lndTtl1Box.Text, lndTtl1Box).Title;
-                lndAuthBoxG.Text = Search(lndTtl1Box.Text, lndTtl1Box).Author;
+                lndTtlBoxG.Text = Search(lndTtl1Box.Text).Title;
+                lndAuthBoxG.Text = Search(lndTtl1Box.Text).Author;
                 lndLendBtn.Enabled = true;
                 lndCcl1Btn.Enabled = true;
             }
@@ -48,9 +48,9 @@ namespace Bibl
 
         private void lndLendBtn_Click(object sender, EventArgs e)
         {
-            if (Search(lndTtlBoxG.Text, lndTtl1Box).Lent == 0)
+            if (Search(lndTtlBoxG.Text).Lent == 0)
             {
-                Search(lndTtlBoxG.Text, lndTtl1Box).Lent = 1;
+                Search(lndTtlBoxG.Text).Lent = 1;
                 lndTtlBoxG.Clear();
                 lndAuthBoxG.Clear();
                 lndTtl1Box.Clear();
@@ -75,10 +75,10 @@ namespace Bibl
 
         private void lndCtn2Btn_Click(object sender, EventArgs e)
         {
-            if (Search(lndTtl2Box.Text, lndTtl2Box) != null)
+            if (Search(lndTtl2Box.Text) != null)
             {
-                lndTtl2BoxG.Text = Search(lndTtl2Box.Text, lndTtl2Box).Title;
-                lndAuth2BoxG.Text = Search(lndTtl2Box.Text, lndTtl2Box).Author;
+                lndTtl2BoxG.Text = Search(lndTtl2Box.Text).Title;
+                lndAuth2BoxG.Text = Search(lndTtl2Box.Text).Author;
                 lndRtnBtn.Enabled = true;
                 lndCcl2Btn.Enabled = true;
             }
@@ -92,9 +92,9 @@ namespace Bibl
 
         private void lndRtnBtn_Click(object sender, EventArgs e)
         {
-            if (Search(lndTtl2Box.Text, lndTtl2Box).Lent == 1)
+            if (Search(lndTtl2Box.Text).Lent == 1)
             {
-                Search(lndTtl2BoxG.Text, lndTtl2Box).Lent = 0;
+                Search(lndTtl2BoxG.Text).Lent = 0;
                 lndTtl2BoxG.Clear();
                 lndAuth2BoxG.Clear();
                 lndTtl2Box.Clear();
@@ -115,6 +115,20 @@ namespace Bibl
             lndTtl2Box.Clear();
             lndRtnBtn.Enabled = false;
             lndCcl2Btn.Enabled = false;
+        }
+
+        public void AutoFill(string title)
+        {
+            if (Search(title).Lent == 1)
+            {
+                lndTtl2Box.Text = title;
+                lndCtn2Btn.PerformClick();
+            }
+            else if (Search(title).Lent == 0)
+            {
+                lndTtl1Box.Text = title;
+                lndCtnBtn.PerformClick();
+            }
         }
     }
 }

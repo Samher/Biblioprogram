@@ -79,6 +79,7 @@
             this.srhLstBox.Name = "srhLstBox";
             this.srhLstBox.Size = new System.Drawing.Size(339, 264);
             this.srhLstBox.TabIndex = 6;
+            this.srhLstBox.DoubleClick += new System.EventHandler(this.srhLstBox_DoubleClick);
             // 
             // button1
             // 
