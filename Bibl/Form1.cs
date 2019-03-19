@@ -46,7 +46,7 @@ namespace Bibl
             int tempLent;
             while ((s = rfile.ReadLine()) != null)
             {
-                string[] readdata = s.Split(',');
+                string[] readdata = s.Split('§');
                 tempTtl = readdata[0];
                 tempAuth = readdata[1];
                 tempLent = int.Parse(readdata[2]);
@@ -59,7 +59,7 @@ namespace Bibl
         {
             StreamWriter wfile = new StreamWriter("registry.txt");
             foreach (Verk element in registry)
-                wfile.WriteLine(element.Title + "," + element.Author + "," + element.Lent);
+                wfile.WriteLine(element.Title + "§" + element.Author + "§" + element.Lent);
             wfile.Close();
         }
     }

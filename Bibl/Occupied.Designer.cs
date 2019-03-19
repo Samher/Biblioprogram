@@ -37,13 +37,13 @@
             this.OccpdLbl.AutoSize = true;
             this.OccpdLbl.Location = new System.Drawing.Point(25, 22);
             this.OccpdLbl.Name = "OccpdLbl";
-            this.OccpdLbl.Size = new System.Drawing.Size(177, 13);
+            this.OccpdLbl.Size = new System.Drawing.Size(96, 13);
             this.OccpdLbl.TabIndex = 0;
-            this.OccpdLbl.Text = "Ett verk med denna titel finns redan.";
+            this.OccpdLbl.Text = "Någonting gick fel.";
             // 
             // occClsBtn
             // 
-            this.occClsBtn.Location = new System.Drawing.Point(76, 51);
+            this.occClsBtn.Location = new System.Drawing.Point(37, 51);
             this.occClsBtn.Name = "occClsBtn";
             this.occClsBtn.Size = new System.Drawing.Size(75, 23);
             this.occClsBtn.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(224, 96);
+            this.ClientSize = new System.Drawing.Size(146, 96);
             this.Controls.Add(this.occClsBtn);
             this.Controls.Add(this.OccpdLbl);
             this.Name = "Occupied";
