@@ -186,6 +186,7 @@
             this.lndCcl2Btn.TabIndex = 14;
             this.lndCcl2Btn.Text = "Avbryt";
             this.lndCcl2Btn.UseVisualStyleBackColor = true;
+            this.lndCcl2Btn.Click += new System.EventHandler(this.lndCcl2Btn_Click);
             // 
             // lndRtnBtn
             // 
@@ -196,6 +197,7 @@
             this.lndRtnBtn.TabIndex = 13;
             this.lndRtnBtn.Text = "Lämna";
             this.lndRtnBtn.UseVisualStyleBackColor = true;
+            this.lndRtnBtn.Click += new System.EventHandler(this.lndRtnBtn_Click);
             // 
             // lndCtn2Btn
             // 
@@ -205,6 +207,7 @@
             this.lndCtn2Btn.TabIndex = 12;
             this.lndCtn2Btn.Text = "Vidare";
             this.lndCtn2Btn.UseVisualStyleBackColor = true;
+            this.lndCtn2Btn.Click += new System.EventHandler(this.lndCtn2Btn_Click);
             // 
             // lndTtl2Box
             // 
