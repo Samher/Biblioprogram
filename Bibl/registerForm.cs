@@ -15,7 +15,7 @@ namespace Bibl
         public registerForm()
         {
             InitializeComponent();
-            RegUpdate(Form1.registry);
+            RegUpdate();
         }
 
         private void AddWork()
@@ -23,7 +23,7 @@ namespace Bibl
             Form1.registry.Add(new Verk(regTtlBox.Text, regAuthBox.Text, 0));
             regAuthBox.Clear();
             regTtlBox.Clear();
-            RegUpdate(Form1.registry);
+            RegUpdate();
         }
 
         private void regInsertBtn_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Bibl
             AddWork();
         }
 
-        private void RegUpdate(List<Verk> reg)
+        public void RegUpdate()
         {
             regRegBox.Clear();
             foreach (Verk work in Form1.registry)
@@ -59,7 +59,7 @@ namespace Bibl
                 if (regTtlBox.Text.ToUpper() == Form1.registry[i - 1].Title.ToUpper())
                 {
                     Form1.registry.RemoveAt(i - 1);
-                    RegUpdate(Form1.registry);
+                    RegUpdate();
                 }
             }
         }
@@ -71,7 +71,7 @@ namespace Bibl
                 if (regAuthBox.Text.ToUpper() == Form1.registry[i - 1].Author.ToUpper())
                 {
                     Form1.registry.RemoveAt(i - 1);
-                    RegUpdate(Form1.registry);
+                    RegUpdate();
                 }
             }
         }

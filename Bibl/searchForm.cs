@@ -33,6 +33,8 @@ namespace Bibl
             }
         }
 
+        /* Metoden gör så att när ett element i listboxen dubbel-
+         * klickas på, körs AutoFill-funktionen från lendForm. */
         private void srhLstBox_DoubleClick(object sender, EventArgs e)
         {
             lendForm lndfrm = new lendForm();

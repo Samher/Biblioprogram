@@ -18,8 +18,10 @@ namespace Bibl
             InitializeComponent();
         }
 
-        public static List<Verk> registry = new List<Verk>();
+        // Denna lista innehåller alla verk registret, lagrat som "Verk"-objekt.
+        public static List<Verk> registry = new List<Verk>(); 
 
+        // Följande tre metoder öppnar motsvarande fönster när deras knapp trycks på.
         private void searchBtn_Click(object sender, EventArgs e)
         {
             searchForm search = new searchForm();
@@ -38,7 +40,8 @@ namespace Bibl
             lend.Show();
         }
 
-        private void importBtn_Click(Object sender, EventArgs e)
+        // Denna metod importerar registret sparat i en textfil förra gången programmet stängdes ned.
+        private void importBtn_Click(object sender, EventArgs e)
         {
             registry.Clear();
             StreamReader rfile = new StreamReader("registry.txt");
@@ -55,6 +58,9 @@ namespace Bibl
             rfile.Close();
         }
 
+        /* Detta händer när programmet stängs ned. 
+         * Hela registret dumpas i en textfil, 
+         * så att den kan importeras nästa gång programmet körs. */
         private void Exiting(object sender, FormClosingEventArgs e)
         {
             StreamWriter wfile = new StreamWriter("registry.txt");
@@ -64,3 +70,4 @@ namespace Bibl
         }
     }
 }
+ 
