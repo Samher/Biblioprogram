@@ -35,8 +35,8 @@
             this.regInsertBtn = new System.Windows.Forms.Button();
             this.regRemoveBBtn = new System.Windows.Forms.Button();
             this.regRemoveABtn = new System.Windows.Forms.Button();
-            this.regRegBox = new System.Windows.Forms.TextBox();
             this.regRegLbl = new System.Windows.Forms.Label();
+            this.regLstBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // regTtlBox
@@ -101,19 +101,6 @@
             this.regRemoveABtn.UseVisualStyleBackColor = true;
             this.regRemoveABtn.Click += new System.EventHandler(this.regRemoveABtn_Click);
             // 
-            // regRegBox
-            // 
-            this.regRegBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.regRegBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.regRegBox.Location = new System.Drawing.Point(213, 35);
-            this.regRegBox.Multiline = true;
-            this.regRegBox.Name = "regRegBox";
-            this.regRegBox.ReadOnly = true;
-            this.regRegBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.regRegBox.Size = new System.Drawing.Size(209, 235);
-            this.regRegBox.TabIndex = 7;
-            // 
             // regRegLbl
             // 
             this.regRegLbl.AutoSize = true;
@@ -123,13 +110,24 @@
             this.regRegLbl.TabIndex = 8;
             this.regRegLbl.Text = "Register";
             // 
+            // regLstBox
+            // 
+            this.regLstBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.regLstBox.FormattingEnabled = true;
+            this.regLstBox.Location = new System.Drawing.Point(213, 35);
+            this.regLstBox.Name = "regLstBox";
+            this.regLstBox.Size = new System.Drawing.Size(218, 238);
+            this.regLstBox.TabIndex = 9;
+            // 
             // registerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 282);
+            this.Controls.Add(this.regLstBox);
             this.Controls.Add(this.regRegLbl);
-            this.Controls.Add(this.regRegBox);
             this.Controls.Add(this.regRemoveABtn);
             this.Controls.Add(this.regRemoveBBtn);
             this.Controls.Add(this.regInsertBtn);
@@ -153,7 +151,7 @@
         private System.Windows.Forms.Button regInsertBtn;
         private System.Windows.Forms.Button regRemoveBBtn;
         private System.Windows.Forms.Button regRemoveABtn;
-        private System.Windows.Forms.TextBox regRegBox;
         private System.Windows.Forms.Label regRegLbl;
+        private System.Windows.Forms.ListBox regLstBox;
     }
 }

@@ -15,17 +15,20 @@ namespace Bibl
         public registerForm()
         {
             InitializeComponent();
-            RegUpdate(Form1.registry);
+            RegUpdate();
         }
 
+        //Denna funktion lägger till ett verk i registret och tömmer inmatningstexten
         private void AddWork()
         {
             Form1.registry.Add(new Verk(regTtlBox.Text, regAuthBox.Text, 0));
             regAuthBox.Clear();
             regTtlBox.Clear();
-            RegUpdate(Form1.registry);
+            RegUpdate();
         }
 
+        /*Denna funktion aktiverar föregående funktion förutsatt att verket inte redan finns i registret.
+        Annars visas error-fönstret*/
         private void regInsertBtn_Click(object sender, EventArgs e)
         {
             foreach (Verk work in Form1.registry)
@@ -40,41 +43,49 @@ namespace Bibl
             AddWork();
         }
 
-        private void RegUpdate(List<Verk> reg)
+        /*Här uppdateras registret som visas i fönstret. Den skriver ut alla data som lagras i ett verk.
+        Den körs varje gång registret ändras*/
+        private void RegUpdate()
         {
-            regRegBox.Clear();
+            regLstBox.Items.Clear();
             foreach (Verk work in Form1.registry)
             {
                 if (work.Lent == 1)
-                    regRegBox.Text += work.Title + " | " + work.Author + " | Utlånad\r\n";
+                    regLstBox.Items.Add(work.Title + "|" + work.Author + "|Utlånad");
                 else
-                    regRegBox.Text += work.Title + " | " + work.Author + " | Ej utlånad\r\n";
+                    regLstBox.Items.Add(work.Title + "|" + work.Author + "|Ej utlånad");
             }
         }
 
+        /*Denna funktion tar bort verket som är markerat i register-boxen vid knapptrycket genom att dela 
+        upp verket som en sträng och jämföra titeln med verken i registerlistan*/
         private void regRemoveBBtn_Click(object sender, EventArgs e)
         {
+            string s = regLstBox.SelectedItem.ToString();
+            string[] mrkdString = s.Split('|');
             for (int i = Form1.registry.Count; i > 0; i--)
             {
-                if (regTtlBox.Text.ToUpper() == Form1.registry[i - 1].Title.ToUpper())
+                if (Form1.registry[i - 1].Title == mrkdString[0])
                 {
-                    Form1.registry.RemoveAt(i - 1);
-                    RegUpdate(Form1.registry);
+                    Form1.registry.Remove(Form1.registry[i - 1]);
                 }
             }
+            RegUpdate();
         }
 
+        //Här utförs i princip samma sak som i föregående funktion men den jämför författare istället
         private void regRemoveABtn_Click(object sender, EventArgs e)
         {
+            string s = regLstBox.SelectedItem.ToString();
+            string[] mrkdString = s.Split('|');
             for (int i = Form1.registry.Count; i > 0; i--)
             {
-                if (regAuthBox.Text.ToUpper() == Form1.registry[i - 1].Author.ToUpper())
+                if (Form1.registry[i - 1].Author == mrkdString[1])
                 {
-                    Form1.registry.RemoveAt(i - 1);
-                    RegUpdate(Form1.registry);
+                    Form1.registry.Remove(Form1.registry[i - 1]);
                 }
             }
+            RegUpdate();
         }
-
     }
 }

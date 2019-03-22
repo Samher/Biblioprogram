@@ -17,6 +17,9 @@ namespace Bibl
             InitializeComponent();
         }
 
+        /*När funktionen nedan aktiveras av sökknappen töms sökresultatsfältet och programmet börjar söka
+        på det nya angivna sökordet. Det gör detta genom att jämföra både titel och författare med det
+        användaren skrev in i sökfältet*/
         private void srhSearchBtn_Click(object sender, EventArgs e)
         {
             srhLstBox.Items.Clear();
@@ -33,6 +36,9 @@ namespace Bibl
             }
         }
 
+        /*Om man dubbelklickar på sökresultatsfältet aktiveras denna funktion som tar användaren till
+        låneformuläret. Den skickar med titeln på det markerade objektet i listboxen till en funktion 
+        i låneformuläret och stänger sedan sökformen*/
         private void srhLstBox_DoubleClick(object sender, EventArgs e)
         {
             lendForm lndfrm = new lendForm();

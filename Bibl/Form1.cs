@@ -11,8 +11,10 @@ using System.IO;
 
 namespace Bibl
 {
+    
     public partial class Form1 : Form
     {
+        FormCollection fs = Application.OpenForms;
         public Form1()
         {
             InitializeComponent();
