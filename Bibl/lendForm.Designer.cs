@@ -261,7 +261,7 @@
             this.Controls.Add(this.lndTtl1Box);
             this.Controls.Add(this.lndTtl1Lbl);
             this.Name = "lendForm";
-            this.Text = "lendForm";
+            this.Text = "Låna / Lämna";
             this.ResumeLayout(false);
             this.PerformLayout();
 

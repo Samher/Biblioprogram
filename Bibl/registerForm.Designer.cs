@@ -136,7 +136,7 @@
             this.Controls.Add(this.regTtlLbl);
             this.Controls.Add(this.regTtlBox);
             this.Name = "registerForm";
-            this.Text = "registerForm";
+            this.Text = "Mata in / Ta bort";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -92,7 +92,7 @@
             this.Controls.Add(this.srhBox);
             this.HelpButton = true;
             this.Name = "searchForm";
-            this.Text = "searchForm";
+            this.Text = "Sök";
             this.ResumeLayout(false);
             this.PerformLayout();
 

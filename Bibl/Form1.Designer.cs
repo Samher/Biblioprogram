@@ -86,7 +86,7 @@
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.insertBtn);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Biblioteksprogram";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Exiting);
             this.ResumeLayout(false);
 

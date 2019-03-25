@@ -59,7 +59,7 @@
             this.Controls.Add(this.occClsBtn);
             this.Controls.Add(this.OccpdLbl);
             this.Name = "Occupied";
-            this.Text = "Occupied";
+            this.Text = "Fel";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -17,7 +17,9 @@ namespace Bibl
             InitializeComponent();
         }
 
-        private Verk Search(string s)
+        /* Metoden tar en titel och returnerar ett verk 
+         * med den titeln från registret om det finns. */
+        private Verk Search(string s) 
         {
             foreach (Verk element in Form1.registry)
             {
@@ -29,6 +31,7 @@ namespace Bibl
             return null;
         }
 
+        // Metoden fyller i de grå rutorna på låna-sidan av fönstret med relevant information om verket. 
         private void lndCtnBtn_Click(object sender, EventArgs e)
         {
             if (Search(lndTtl1Box.Text) != null)
@@ -46,6 +49,8 @@ namespace Bibl
             }
         }
 
+        /* När knappen klickas rensas alla textrutor på låna-sidan, 
+         * och verkets "lent"-egenskap sätts till 1 (lånad). */
         private void lndLendBtn_Click(object sender, EventArgs e)
         {
             if (Search(lndTtlBoxG.Text).Lent == 0)
@@ -64,6 +69,7 @@ namespace Bibl
             }
         }
 
+        // När knappen trycks rensar metoden informationen på låna-sidan. 
         private void lndCcl1Btn_Click(object sender, EventArgs e)
         {
             lndTtlBoxG.Clear();
@@ -73,6 +79,7 @@ namespace Bibl
             lndCcl1Btn.Enabled = false;
         }
 
+        // Metoden fyller i de grå rutorna på lämna-sidan av fönstret med relevant information om verket. 
         private void lndCtn2Btn_Click(object sender, EventArgs e)
         {
             if (Search(lndTtl2Box.Text) != null)
@@ -90,6 +97,8 @@ namespace Bibl
             }
         }
 
+        /* När knappen klickas rensas alla textrutor på låna-sidan, 
+         * och verkets "lent"-egenskap sätts till 0 (ej lånad). */
         private void lndRtnBtn_Click(object sender, EventArgs e)
         {
             if (Search(lndTtl2Box.Text).Lent == 1)
@@ -108,6 +117,7 @@ namespace Bibl
             }
         }
 
+        // När knappen trycks rensar metoden informationen på lämna-sidan. 
         private void lndCcl2Btn_Click(object sender, EventArgs e)
         {
             lndTtl2BoxG.Clear();
@@ -117,7 +127,10 @@ namespace Bibl
             lndCcl2Btn.Enabled = false;
         }
 
-        public void AutoFill(string title)
+        /* Följande metod körs när man dubbelklickar på ett verk i sökfönstret. 
+         * Beroende på om verket är lånat eller inte 
+         * fyller den i relevant information i rätt text-rutor. */
+        public void AutoFill(string title) 
         {
             if (Search(title).Lent == 1)
             {
